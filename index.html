@@ -1,0 +1,1034 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f8fb">
+    <meta name="description" content="Ujjwol Chaulagain creates engaging video content for brands across every industry.">
+    <title>Ujjwol Chaulagain | Portfolio</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #f7f8fb;
+            --ink: #172033;
+            --muted: #586477;
+            --line: #dfe4ed;
+            --blue: #315fd4;
+            --blue-dark: #2248a8;
+            --blue-pale: #edf2ff;
+            --white: #fff;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.5;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .wrap {
+            width: min(1120px, calc(100% - 56px));
+            margin: 0 auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(223, 228, 237, .85);
+            background: rgba(247, 248, 251, .92);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 4px 18px rgba(23, 32, 51, .035);
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+            font-size: 15px;
+            font-weight: 750;
+            letter-spacing: -.04em;
+            text-decoration: none;
+        }
+
+        .brand-avatar {
+            width: 38px;
+            height: 38px;
+            display: block;
+            object-fit: cover;
+            object-position: center 35%;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px var(--line), 0 4px 12px rgba(23, 32, 51, .12);
+        }
+
+        .brand-mark {
+            color: var(--blue);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .8);
+            font-size: 13px;
+        }
+
+        .nav a {
+            padding: 10px 15px;
+            border-radius: 999px;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color .18s ease, background .18s ease;
+        }
+
+        .nav a:hover,
+        .plain-link:hover {
+            color: var(--blue);
+            background: var(--blue-pale);
+        }
+
+        .nav .nav-contact {
+            background: var(--blue);
+            color: var(--white);
+        }
+
+        .nav .nav-contact:hover {
+            background: var(--blue-dark);
+            color: var(--white);
+        }
+
+        .hero {
+            position: relative;
+            isolation: isolate;
+            min-height: min(720px, calc(100vh - 78px));
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 90px 0 100px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            z-index: -2;
+            inset: 0 -12vw 0 34%;
+            background: #bce8f8;
+            clip-path: ellipse(69% 78% at 83% 50%);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            inset: 0 9% 0 14%;
+            background: url("images/mun-portrait.jpg") 48% 42% / auto 108% no-repeat;
+            opacity: .25;
+            filter: grayscale(1);
+            mask-image: linear-gradient(90deg, transparent 0%, #000 18%, #000 65%, transparent 100%);
+        }
+
+        .hero-copy {
+            max-width: 660px;
+            padding: 28px 0;
+        }
+
+        .eyebrow,
+        .section-label {
+            margin: 0 0 18px;
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 750;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            max-width: 760px;
+            color: #46515e;
+            font-size: clamp(58px, 9vw, 104px);
+            line-height: .97;
+            letter-spacing: -.075em;
+            font-weight: 720;
+        }
+
+        h1 span {
+            color: var(--blue);
+        }
+
+        .hero-text {
+            max-width: 590px;
+            margin: 26px 0 0;
+            color: var(--muted);
+            font-size: 18px;
+            line-height: 1.75;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .button {
+            min-height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 0 18px;
+            border: 1px solid var(--blue);
+            border-radius: 999px;
+            background: var(--blue);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 650;
+            transition: background .18s ease, transform .18s ease;
+        }
+
+        .button:hover {
+            background: var(--blue-dark);
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            background: transparent;
+            color: var(--ink);
+            border-color: var(--line);
+        }
+
+        .button-outline:hover {
+            background: var(--white);
+            color: var(--ink);
+        }
+
+        .section {
+            padding: 78px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .section-heading {
+            max-width: 640px;
+            margin-bottom: 32px;
+        }
+
+        .section-label {
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.08;
+            letter-spacing: -.06em;
+            font-weight: 650;
+        }
+
+        .section-intro {
+            margin: 14px 0 0;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .info-card {
+            min-height: 170px;
+            padding: 22px;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: var(--white);
+            box-shadow: 0 8px 24px rgba(23, 35, 49, .035);
+            transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-3px);
+            border-color: #c8d5f2;
+            box-shadow: 0 14px 30px rgba(23, 32, 51, .08);
+        }
+
+        .info-card h3 {
+            margin: 0 0 12px;
+            font-size: 14px;
+            letter-spacing: -.02em;
+            color: var(--blue-dark);
+        }
+
+        .info-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 26px;
+        }
+
+        .skill {
+            padding: 9px 13px;
+            border: 1px solid #d7e2ff;
+            border-radius: 999px;
+            background: var(--blue-pale);
+            color: #294b94;
+            font-size: 12px;
+        }
+
+        .gallery-section {
+            background: var(--white);
+        }
+
+        .profile-grid,
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .profile-embed {
+            min-width: 0;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: var(--white);
+        }
+
+        .profile-embed iframe {
+            display: block;
+            width: 100%;
+            height: 560px;
+            border: 0;
+            background: #fff;
+        }
+
+        .profile-embed p { margin: 0; padding: 12px 15px; color: var(--muted); font-size: 13px; }
+        .profile-embed p a { color: var(--blue-dark); }
+
+        .video-card {
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: var(--white);
+        }
+
+        .video-card iframe {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: 0;
+            background: #e6edf7;
+        }
+
+        .video-card p { margin: 0; padding: 14px 16px; color: var(--muted); font-size: 13px; }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .photo {
+            position: relative;
+            margin: 0;
+            overflow: hidden;
+            aspect-ratio: 4 / 5;
+            border-radius: 14px;
+            background: #e6edf7;
+            box-shadow: 0 8px 24px rgba(23, 32, 51, .08);
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform .35s ease;
+        }
+
+        .photo:hover img {
+            transform: scale(1.035);
+        }
+
+        .photo figcaption {
+            transition: padding .2s ease;
+        }
+
+        .photo:hover figcaption {
+            padding-bottom: 19px;
+        }
+
+        .photo figcaption {
+            position: absolute;
+            inset: auto 0 0;
+            padding: 38px 16px 15px;
+            background: linear-gradient(transparent, rgba(13, 26, 48, .8));
+            color: var(--white);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .contact-section {
+            position: relative;
+            overflow: hidden;
+            padding: 82px 0;
+            background: radial-gradient(circle at 88% 12%, rgba(116, 163, 255, .28), transparent 29%), linear-gradient(130deg, #12233f, #234b7c);
+            color: var(--white);
+        }
+
+        .contact-section::before {
+            content: "";
+            position: absolute;
+            width: 340px;
+            height: 340px;
+            right: -150px;
+            bottom: -210px;
+            border: 1px solid rgba(255,255,255,.18);
+            border-radius: 50%;
+            box-shadow: 0 0 0 32px rgba(255,255,255,.035), 0 0 0 68px rgba(255,255,255,.025);
+            pointer-events: none;
+        }
+
+        .contact-row {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(340px, .9fr);
+            align-items: center;
+            gap: 56px;
+        }
+
+        .contact-section .section-label {
+            color: #a9c2ff;
+        }
+
+        .contact-section h2 {
+            max-width: 520px;
+        }
+
+        .contact-copy {
+            max-width: 480px;
+            margin: 16px 0 0;
+            color: #d0daea;
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .contact-panel {
+            position: relative;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, .28);
+            border-radius: 24px;
+            background: rgba(255, 255, 255, .12);
+            box-shadow: 0 24px 58px rgba(4, 14, 32, .3);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-panel-title {
+            margin: 0 0 20px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 650;
+            letter-spacing: -.02em;
+        }
+
+        .contact-links {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 11px;
+        }
+
+        .contact-links .button {
+            min-height: 48px;
+            width: 100%;
+            padding: 0 13px;
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+
+        .contact-links .button svg {
+            width: 17px;
+            height: 17px;
+            flex: 0 0 auto;
+        }
+
+        .contact-section .button {
+            border-color: #fff;
+            background: #fff;
+            color: #172947;
+        }
+
+        .contact-section .button:hover {
+            background: #e8efff;
+        }
+
+        .contact-section .button-outline {
+            border-color: rgba(255, 255, 255, .4);
+            background: transparent;
+            color: #fff;
+        }
+
+        .contact-section .button-outline:hover {
+            background: rgba(255, 255, 255, .1);
+        }
+
+        .email-link {
+            display: inline-block;
+            max-width: 100%;
+            margin-top: 22px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, .18);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            text-underline-offset: 4px;
+            overflow-wrap: anywhere;
+        }
+
+        .footer {
+            padding: 22px 0;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .footer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            text-underline-offset: 4px;
+        }
+
+        .social-links a:hover,
+        .email-link:hover {
+            opacity: .78;
+        }
+
+        .footer-meta { display: flex; align-items: center; justify-content: flex-end; gap: 22px; }
+        .made-by { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); white-space: nowrap; }
+        .made-by a { display: inline-grid; width: 32px; height: 32px; place-items: center; border: 1px solid #dcd9ff; border-radius: 50%; background: #f0efff; color: #4944ba; font-size: 11px; font-weight: 800; letter-spacing: -.08em; text-decoration: none; transition: transform .2s ease, background .2s ease; }
+        .made-by a:hover { transform: rotate(-8deg) scale(1.08); background: #e4e1ff; }
+
+        :focus-visible {
+            outline: 3px solid #68aaa2;
+            outline-offset: 3px;
+        }
+
+        .skills-heading {
+            margin: 30px 0 0;
+            color: var(--ink);
+            font-size: 14px;
+            letter-spacing: -.02em;
+        }
+
+        @media (max-width: 760px) {
+            .wrap {
+                width: min(100% - 36px, 560px);
+            }
+
+            .site-header {
+                height: 68px;
+            }
+
+            .nav {
+                gap: 14px;
+            }
+
+            .nav a:not(.nav-contact) {
+                display: none;
+            }
+
+            .hero {
+                min-height: 560px;
+                padding: 70px 0;
+            }
+
+            .hero::before {
+                inset: 0 -60% 0 22%;
+                opacity: .75;
+            }
+
+            .hero::after {
+                inset: 4% -8% 0 18%;
+                background-position: 48% center;
+                background-size: auto 85%;
+                opacity: .18;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-card {
+                min-height: unset;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .profile-grid, .video-grid { grid-template-columns: 1fr; }
+
+            .photo {
+                aspect-ratio: 3 / 4;
+            }
+
+            .contact-row {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .contact-panel {
+                padding: 20px;
+            }
+
+            .contact-links {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-row {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: .01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Refined portfolio details and motion */
+        :root { --blue: #5a55e8; --blue-dark: #403bc2; --blue-pale: #f0efff; --bg: #faf9f6; --ink: #17182b; --muted: #666779; --line: #e8e6e2; }
+        body { background: var(--bg); }
+        .site-header { width: 100%; padding-inline: max(28px, calc((100vw - 1120px)/2)); }
+        .hero { min-height: min(760px, calc(100vh - 78px)); }
+        .hero::before { background: linear-gradient(145deg, #dedcff, #c5f3ec 78%); clip-path: ellipse(73% 82% at 83% 50%); animation: floatGlow 9s ease-in-out infinite alternate; }
+        .hero::after { opacity: .32; }
+        .hero-copy { animation: riseIn .8s both; }
+        h1 { color: var(--ink); }
+        h1 span { color: var(--blue); }
+        .eyebrow { display: inline-flex; align-items: center; gap: 9px; padding: 9px 13px; border: 1px solid rgba(90,85,232,.16); border-radius: 999px; background: rgba(255,255,255,.68); }
+        .eyebrow::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #36b89c; box-shadow: 0 0 0 4px rgba(54,184,156,.12); }
+        .button { box-shadow: 0 8px 20px rgba(90,85,232,.16); }
+        .section { padding-block: 92px; }
+        .info-card, .video-card, .profile-embed { border-radius: 20px; }
+        .info-card { padding: 26px; }
+        .info-card:hover { transform: translateY(-6px); }
+        .gallery-section { background: #f1f0ec; }
+        .photo { border-radius: 20px; }
+        .video-card, .profile-embed { box-shadow: 0 12px 32px rgba(23,24,43,.07); }
+        .skill { border-color: #e0ddff; background: #f3f2ff; color: #4944ba; }
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s cubic-bezier(.2,.75,.25,1); }
+        .reveal.is-visible { opacity: 1; transform: none; }
+        @keyframes riseIn { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes floatGlow { from { transform: translateY(-8px) scale(1); } to { transform: translateY(8px) scale(1.025); } }
+        @media (max-width: 760px) {
+            .site-header { width: 100%; padding-inline: 18px; }
+            .hero { min-height: 620px; padding: 62px 0 80px; }
+            .hero::before { inset: 4% -65% 0 8%; }
+            .hero::after { inset: 9% -30% 0 4%; background-size: auto 72%; opacity: .15; }
+            .hero-copy { max-width: 100%; }
+            h1 { font-size: clamp(58px, 16vw, 88px); }
+            .hero-text { max-width: 460px; }
+            .section { padding-block: 66px; }
+            .nav { gap: 2px; }
+            .nav a:not(.nav-contact) { display: inline-flex; padding: 9px 10px; }
+            .nav .nav-contact { padding: 9px 12px; }
+            .info-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+            .info-card:last-child { grid-column: 1 / -1; }
+            .gallery-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+            .profile-embed iframe { height: 470px; }
+            .contact-section { padding: 68px 0; }
+            .contact-row { gap: 30px; }
+            .contact-section h2 { max-width: 440px; font-size: clamp(34px, 8vw, 46px); }
+            .contact-copy { margin-top: 12px; font-size: 15px; }
+            .contact-panel { padding: 24px; border-radius: 22px; background: rgba(255,255,255,.14); box-shadow: 0 20px 46px rgba(4,14,32,.24); }
+            .contact-panel-title { margin-bottom: 16px; font-size: 17px; }
+            .contact-links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+            .contact-links .button { min-height: 54px; padding: 9px 10px; border-radius: 14px; white-space: normal; text-align: center; line-height: 1.3; }
+            .contact-links .button svg { width: 16px; height: 16px; }
+            .email-link { margin-top: 18px; font-size: 13px; }
+            .section-heading { margin-bottom: 25px; }
+            .section-intro { max-width: 56ch; }
+            .skills { gap: 8px; margin-top: 20px; }
+            .skill { padding: 8px 11px; }
+            .video-card p, .profile-embed p { padding: 13px 14px; }
+            .profile-grid { gap: 14px; }
+            .gallery-grid { gap: 12px; }
+            .photo figcaption { padding: 34px 13px 13px; }
+            .footer { padding: 20px 0 24px; }
+        }
+        @media (max-width: 480px) {
+            .wrap { width: calc(100% - 32px); }
+            .site-header { padding-inline: 16px; }
+            .brand { font-size: 13px; gap: 8px; }
+            .brand-avatar { width: 34px; height: 34px; }
+            .nav { gap: 0; padding: 3px; font-size: 11px; }
+            .nav a:not(.nav-contact) { padding: 8px 7px; }
+            .nav .nav-contact { padding: 8px 9px; }
+            .hero { min-height: 590px; }
+            .eyebrow { font-size: 9px; letter-spacing: .11em; }
+            .hero .eyebrow { max-width: 250px; font-size: 9px; letter-spacing: .09em; }
+            .hero-actions { align-items: stretch; gap: 10px; }
+            .hero-actions .button { flex: 1; padding-inline: 12px; font-size: 12px; }
+            .info-grid, .gallery-grid { grid-template-columns: 1fr; }
+            .info-card:last-child { grid-column: auto; }
+            .photo { aspect-ratio: 4 / 3; }
+            .contact-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .section-label { margin-bottom: 10px; }
+            .section-heading { margin-bottom: 22px; }
+            .info-card { padding: 21px; border-radius: 17px; }
+            .skills-heading { margin-top: 24px; }
+            .profile-embed iframe { height: 430px; }
+            .video-card, .profile-embed { border-radius: 17px; }
+            .footer-row { gap: 12px; }
+            .social-links { gap: 14px; }
+            .footer-meta { width: 100%; justify-content: space-between; gap: 14px; }
+        }
+        @media (max-width: 360px) {
+            .contact-panel { padding: 18px; }
+            .contact-links { grid-template-columns: 1fr; }
+            .contact-links .button { min-height: 48px; }
+            .brand { font-size: 12px; }
+            .brand-avatar { width: 30px; height: 30px; }
+            .nav { font-size: 10px; }
+            .nav a:not(.nav-contact) { padding-inline: 5px; }
+            .nav .nav-contact { padding-inline: 7px; }
+            .profile-embed iframe { height: 390px; }
+        }
+        @media (hover: none) {
+            .info-card:hover, .button:hover { transform: none; }
+            .photo:hover img { transform: none; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero::before, .hero-copy { animation: none; }
+            .reveal { opacity: 1; transform: none; transition: none; }
+        }
+        /* Keep the original hero treatment while the rest of the site uses the refreshed style. */
+        .hero::before { background: #bce8f8; clip-path: ellipse(69% 78% at 83% 50%); animation: floatGlow 9s ease-in-out infinite alternate; }
+        .hero::after { opacity: .25; }
+        .hero-copy { animation: none; }
+        .hero .eyebrow { display: block; padding: 0; border: 0; border-radius: 0; background: transparent; }
+        .hero .eyebrow::before { content: none; }
+        .hero .eyebrow { max-width: 100%; font-size: clamp(9px, 1vw, 11px); letter-spacing: .12em; line-height: 1.6; }
+        .hero h1 { color: #46515e; }
+        .hero h1 span { color: #315fd4; }
+        .hero .button { border-color: #315fd4; background: #315fd4; box-shadow: none; }
+        .hero .button:hover { background: #2248a8; }
+        .hero .button-outline { border-color: #e8e6e2; background: transparent; color: #17182b; }
+        .hero-copy > * { animation: riseIn .65s both; }
+        .hero-copy > :nth-child(1) { animation-delay: .05s; }
+        .hero-copy > :nth-child(2) { animation-delay: .14s; }
+        .hero-copy > :nth-child(3) { animation-delay: .23s; }
+        .hero-copy > :nth-child(4) { animation-delay: .32s; }
+        .section-label { transition: letter-spacing .25s ease, color .25s ease; }
+        .section-heading:hover .section-label { letter-spacing: .19em; }
+        .skill { transition: transform .22s ease, background .22s ease, box-shadow .22s ease; }
+        .skill:hover { transform: translateY(-3px); background: #e8e6ff; box-shadow: 0 7px 16px rgba(64,59,194,.1); }
+        .profile-embed, .video-card { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+        .profile-embed:hover, .video-card:hover { transform: translateY(-4px); border-color: #d8d5f4; box-shadow: 0 18px 38px rgba(23,24,43,.12); }
+        .photo { transition: box-shadow .25s ease, transform .25s ease; }
+        .photo:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(23,32,51,.16); }
+        .social-links a, .video-card p a, .profile-embed p a { transition: color .2s ease, opacity .2s ease; }
+        .social-links a:hover, .video-card p a:hover, .profile-embed p a:hover { color: var(--blue); }
+        .button:active { transform: scale(.97); }
+        .nav a { transition: color .2s ease, background .2s ease, transform .2s ease; }
+        .nav a:hover { transform: translateY(-1px); }
+        .footer { width: 100%; margin: 0; padding: 27px max(28px, calc((100vw - 1120px)/2)); border-top: 1px solid #e8e6e2; background: #fff; }
+        .footer-row { width: 100%; max-width: 1120px; margin: 0 auto; color: #777888; }
+        .footer-row > span { font-size: 12px; letter-spacing: .01em; }
+        .footer-meta { gap: 24px; }
+        .footer-meta .social-links { align-items: center; gap: 18px; }
+        .footer-meta .social-links a { color: #626477; font-size: 12px; text-decoration: none; }
+        .footer-meta .social-links a:hover { color: var(--blue); }
+        .made-by { gap: 9px; font-size: 12px; }
+        .made-by a { width: 34px; height: 34px; border-color: #dcd9ff; box-shadow: 0 3px 10px rgba(64,59,194,.08); }
+        @media (max-width: 760px) {
+            .footer { padding: 22px 18px 24px; }
+            .footer-row { align-items: flex-start; gap: 16px; }
+            .footer-meta { width: 100%; justify-content: space-between; gap: 12px; }
+        }
+        @media (max-width: 420px) {
+            .footer { padding: 20px 16px 22px; }
+            .footer-meta { align-items: flex-start; flex-direction: column; gap: 14px; }
+            .footer-meta .social-links { gap: 20px; }
+            .made-by { align-self: flex-end; }
+            .footer-row > span { max-width: 32ch; line-height: 1.6; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero::before { animation: none; }
+            .hero-copy > * { animation: none; }
+            .section-label, .skill, .profile-embed, .video-card, .photo, .nav a { transition: none; }
+            .skill:hover, .profile-embed:hover, .video-card:hover, .photo:hover, .nav a:hover { transform: none; }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header wrap">
+        <a class="brand" href="#top"><img class="brand-avatar" src="images/mun-portrait.jpg" alt=""><span>Ujjwol
+                Chaulagain<span class="brand-mark">.</span></span></a>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#social">Social</a>
+            <a class="nav-contact" href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="hero wrap" aria-labelledby="intro-title">
+            <div class="hero-copy">
+                <p class="eyebrow">Content creator · Video editor · Creative media</p>
+                <h1 id="intro-title">Hello, I’m<br><span>Ujjwol.</span></h1>
+                <p class="hero-text">I’m a content creator and video editor who makes engaging videos for brands across every industry. I’m currently pursuing a BSS degree and enjoy photography, creative production and taking part in Model United Nations.</p>
+                <div class="hero-actions">
+                    <a class="button" href="#about">Discover my work <span aria-hidden="true">&darr;</span></a>
+                    <a class="button button-outline" href="#contact">Contact me</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section wrap" id="about" aria-labelledby="about-title">
+            <div class="section-heading">
+                <p class="section-label">About</p>
+            <h2 id="about-title">Creative content, built around your brand.</h2>
+                <p class="section-intro">Every brand has a story worth sharing. I create thoughtful, energetic video content for businesses and brands of all kinds, shaped around their audience and goals.</p>
+            </div>
+            <div class="info-grid">
+                <article class="info-card">
+                    <h3>Content creation</h3>
+                    <p>Concepting, filming and editing engaging content for brands across any industry—from local businesses to growing names.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Education</h3>
+                    <p>BSS degree — in progress<br>+2 Management — Modern College</p>
+                </article>
+                <article class="info-card">
+                    <h3>Model United Nations</h3>
+                    <p>Took part twice: once as President and once as Under-Secretary-General for Internal Affairs.</p>
+                </article>
+            </div>
+            <h3 class="skills-heading">Skills &amp; interests</h3>
+            <div class="skills" aria-label="Skills and interests">
+                <span class="skill">Video editing</span>
+                <span class="skill">Camera work</span>
+                <span class="skill">Photography</span>
+                <span class="skill">Public speaking</span>
+                <span class="skill">Communication</span>
+                <span class="skill">Cooking</span>
+                <span class="skill">Finance</span>
+            </div>
+        </section>
+
+        <section class="section gallery-section" id="photos" aria-labelledby="photos-title">
+            <div class="wrap">
+                <div class="section-heading">
+                    <p class="section-label">Photos</p>
+                    <h2 id="photos-title">A few moments along the way.</h2>
+                    <p class="section-intro">A selection from events, college and everyday life.</p>
+                </div>
+                <div class="gallery-grid">
+                    <figure class="photo"><img src="images/mun-award.jpg" alt="Ujjwol at a Model United Nations event" loading="lazy">
+                        <figcaption>At a Model United Nations event</figcaption>
+                    </figure>
+                    <figure class="photo"><img src="images/mun-portrait.jpg" alt="Ujjwol at a formal event" loading="lazy">
+                        <figcaption>A formal event</figcaption>
+                    </figure>
+                    <figure class="photo"><img src="images/photo-05.jpg" alt="Ujjwol wearing a suit at an event" loading="lazy">
+                        <figcaption>Ready for an event</figcaption>
+                    </figure>
+                    <figure class="photo"><img src="images/photo-04.jpg" alt="Ujjwol outdoors" loading="lazy">
+                        <figcaption>Outdoors</figcaption>
+                    </figure>
+                    <figure class="photo"><img src="images/outdoor-photo.jpg" alt="Ujjwol standing outside a building" loading="lazy">
+                        <figcaption>A day out</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section gallery-section" id="videos" aria-labelledby="videos-title">
+            <div class="wrap">
+                <div class="section-heading">
+                    <p class="section-label">Video work</p>
+                    <h2 id="videos-title">Videos I’ve created.</h2>
+                    <p class="section-intro">Watch two of my video projects. If an embed is unavailable, use the link below it to watch on Facebook.</p>
+                </div>
+                <div class="video-grid">
+                    <article class="video-card">
+                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1037462942617588&show_text=false&width=500" title="Facebook Reel project one" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <p><a href="https://www.facebook.com/share/v/1GCU48C5Hg/" target="_blank" rel="noopener noreferrer">Watch video on Facebook ↗</a></p>
+                    </article>
+                    <article class="video-card">
+                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1127996599753123&show_text=false&width=500" title="Facebook Reel project two" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <p><a href="https://www.facebook.com/share/v/14rudwdC67F/" target="_blank" rel="noopener noreferrer">Watch video on Facebook ↗</a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section wrap" id="brand-work" aria-labelledby="brand-work-title">
+            <div class="section-heading">
+                <p class="section-label">Brand collaborations</p>
+                <h2 id="brand-work-title">Brands I’ve created videos for.</h2>
+                    <p class="section-intro">A selection of brands and businesses I’ve partnered with to create video content. I’m open to working with brands in every industry.</p>
+            </div>
+            <div class="profile-grid">
+                <article class="profile-embed"><iframe src="https://www.instagram.com/daarjeeling__momo/embed/" title="Daarjeeling Momo Instagram profile" loading="lazy" allowtransparency="true"></iframe></article>
+                <article class="profile-embed"><iframe src="https://www.instagram.com/pikeybar/embed/" title="Pikey Bar Instagram profile" loading="lazy" allowtransparency="true"></iframe></article>
+                <article class="profile-embed"><iframe src="https://www.instagram.com/tiffin_batta/embed/" title="Tiffin Batta Instagram profile" loading="lazy" allowtransparency="true"></iframe></article>
+                <article class="profile-embed"><iframe src="https://www.instagram.com/pocketfood__/embed/" title="Pocket Food Instagram profile" loading="lazy" allowtransparency="true"></iframe></article>
+            </div>
+        </section>
+
+
+
+        <section class="section wrap" id="social" aria-labelledby="social-personal-title">
+            <div class="section-heading">
+                <p class="section-label">Personal profiles</p>
+                <h2 id="social-personal-title">Find Ujjwol on social media.</h2>
+                <p class="section-intro">Follow Ujjwol on Facebook and Instagram, or open either profile directly.</p>
+            </div>
+            <div class="profile-grid">
+                <article class="profile-embed"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fujjwol.chaulagain.1&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" title="Ujjwol Chaulagain Facebook profile" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></article>
+                <article class="profile-embed"><iframe src="https://www.instagram.com/the_real_ujjwol/embed/" title="Ujjwol Instagram profile" loading="lazy" allowtransparency="true"></iframe></article>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="wrap contact-row">
+                <div>
+                    <p class="section-label">Contact</p>
+                    <h2 id="contact-title">Want to get in touch?</h2>
+                    <p class="contact-copy">I’m happy to connect about work, collaboration, or anything else. Choose the
+                        way that works best for you.</p>
+                </div>
+                <div class="contact-panel">
+                    <p class="contact-panel-title">Get in touch</p>
+                    <div class="contact-links">
+                        <a class="button" href="tel:+9779862991872">Call 9862991872</a>
+                        <a class="button button-outline"
+                            href="https://wa.me/9779862991872?text=Hi%20Ujjwol%2C%20I%27d%20like%20to%20get%20in%20touch."
+                            target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <path d="M20.5 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20l1.2-4.9A8.4 8.4 0 1 1 20.5 11.5Z" />
+                                <path
+                                    d="M8.8 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .3.1.4.4l.7 1.6c.1.2.1.4 0 .5l-.5.6c-.2.2-.2.3 0 .6.5.8 1.2 1.5 2 1.9.3.2.4.2.6 0l.7-.8c.2-.2.3-.2.6-.1l1.5.7c.2.1.4.2.4.4 0 .3-.2 1-.6 1.3-.4.4-1 .6-1.6.5-1-.2-2.3-.8-3.5-1.9-1-.9-1.7-2.1-1.9-3.1-.2-.9.1-1.7.5-2.2Z" />
+                            </svg>Message on WhatsApp</a>
+                        <a class="button button-outline"
+                            href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ujjwolchaulagain462%40gmail.com&amp;su=Hello%20Ujjwol&amp;body=Hi%20Ujjwol%2C%0A%0AI%27d%20like%20to%20get%20in%20touch."
+                            target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="3" y="5" width="18" height="14" rx="2" />
+                                <path d="m4 7 8 6 8-6" />
+                            </svg>Message with Gmail</a>
+                        <a class="button button-outline" href="https://www.facebook.com/ujjwol.chaulagain.1"
+                            target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a class="button button-outline" href="https://www.instagram.com/the_real_ujjwol/"
+                            target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </div>
+                    <a class="email-link" href="mailto:ujjwolchaulagain462@gmail.com">ujjwolchaulagain462@gmail.com</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer wrap">
+        <div class="footer-row">
+            <span>&copy; <span id="year">2026</span> Ujjwol Chaulagain. All rights reserved.</span>
+            <div class="footer-meta">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ujjwol.chaulagain.1" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.instagram.com/the_real_ujjwol/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+                <span class="made-by">Made by <a href="https://nischalpokhrel.com.np" target="_blank" rel="noopener noreferrer" aria-label="Visit Nischal Pokhrel’s website" title="Nischal Pokhrel">NP</a></span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            const revealItems = document.querySelectorAll('.section-heading, .info-card, .skill, .photo, .video-card, .profile-embed, .contact-panel, .footer-row');
+            revealItems.forEach((item, index) => {
+                item.classList.add('reveal');
+                item.style.transitionDelay = `${(index % 3) * 75}ms`;
+            });
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            revealItems.forEach(item => observer.observe(item));
+        }
+    </script>
+</body>
+
+</html>
